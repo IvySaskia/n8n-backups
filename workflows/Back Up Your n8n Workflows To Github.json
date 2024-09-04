@@ -163,7 +163,7 @@
         ]
       ]
     },
-    "Every 12 hours": {
+    "Every 24 hours": {
       "main": [
         [
           {
@@ -485,14 +485,13 @@
         "triggerTimes": {
           "item": [
             {
-              "mode": "everyX",
-              "value": 12
+              "hour": 0
             }
           ]
         }
       },
       "id": "9815a578-3e63-4128-bea5-8301745606b7",
-      "name": "Every 12 hours",
+      "name": "Every 24 hours",
       "type": "n8n-nodes-base.cron",
       "position": [
         835,
@@ -517,6 +516,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2024-09-04T22:44:35.000Z",
-  "versionId": "748273cb-9b8c-4303-ab6a-924ba36a97bb"
+  "updatedAt": "2024-09-04T23:14:56.000Z",
+  "versionId": "71b7e636-e64c-40bd-8e25-7fb4a6faa05f"
 }
