@@ -402,7 +402,11 @@
     }
   ],
   "pinData": {},
-  "settings": {},
+  "settings": {
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionOrder": "v1"
+  },
   "staticData": null,
   "tags": [
     {
@@ -413,6 +417,6 @@
     }
   ],
   "triggerCount": 0,
-  "updatedAt": "2024-09-04T22:27:44.000Z",
-  "versionId": "2c7b5daa-f3ea-4221-ad70-9ef0d54e3c7d"
+  "updatedAt": "2024-09-04T22:29:01.000Z",
+  "versionId": "59653e6f-e30e-4c34-92cf-7466da1a10ce"
 }
