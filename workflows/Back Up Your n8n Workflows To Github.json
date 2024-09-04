@@ -501,27 +501,6 @@
       "typeVersion": 1,
       "notesInFlow": true,
       "notes": "Note for every 12 hours"
-    },
-    {
-      "parameters": {
-        "triggerTimes": {
-          "item": [
-            {
-              "mode": "custom"
-            }
-          ]
-        }
-      },
-      "id": "2ed2ee58-d492-4ae4-b5df-5697b3460ae6",
-      "name": "Every 12 hours1",
-      "type": "n8n-nodes-base.cron",
-      "position": [
-        840,
-        860
-      ],
-      "typeVersion": 1,
-      "notesInFlow": true,
-      "notes": "Note for every 12 hours"
     }
   ],
   "pinData": {},
@@ -537,7 +516,7 @@
       "name": "Working"
     }
   ],
-  "triggerCount": 2,
-  "updatedAt": "2024-09-04T22:42:47.000Z",
-  "versionId": "473b32a9-eca7-4132-9364-6ce1d99b0780"
+  "triggerCount": 1,
+  "updatedAt": "2024-09-04T22:44:35.000Z",
+  "versionId": "748273cb-9b8c-4303-ab6a-924ba36a97bb"
 }
