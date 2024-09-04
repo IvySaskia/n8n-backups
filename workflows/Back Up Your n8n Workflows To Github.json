@@ -487,6 +487,8 @@
     {
       "parameters": {
         "content": "## My Notes\n\nrepo.owner es IvySaskia\n\n",
+        "height": 109.2940565299941,
+        "width": 258.2992076672979,
         "color": 6
       },
       "id": "a33c069f-57fd-410e-9923-24455146be75",
@@ -494,8 +496,8 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        940,
-        940
+        1020,
+        120
       ]
     }
   ],
@@ -506,6 +508,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2024-09-04T22:18:54.000Z",
-  "versionId": "04c1fb9c-3d21-42df-b3d7-483a981c0ec1"
+  "updatedAt": "2024-09-04T22:22:05.000Z",
+  "versionId": "c1996676-1058-47ff-8321-5ada24e86ed9"
 }
