@@ -476,7 +476,7 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1020,
+        960,
         120
       ]
     },
@@ -498,7 +498,30 @@
         835,
         595
       ],
-      "typeVersion": 1
+      "typeVersion": 1,
+      "notesInFlow": true,
+      "notes": "Note for every 12 hours"
+    },
+    {
+      "parameters": {
+        "triggerTimes": {
+          "item": [
+            {
+              "mode": "custom"
+            }
+          ]
+        }
+      },
+      "id": "2ed2ee58-d492-4ae4-b5df-5697b3460ae6",
+      "name": "Every 12 hours1",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        840,
+        860
+      ],
+      "typeVersion": 1,
+      "notesInFlow": true,
+      "notes": "Note for every 12 hours"
     }
   ],
   "pinData": {},
@@ -514,7 +537,7 @@
       "name": "Working"
     }
   ],
-  "triggerCount": 1,
-  "updatedAt": "2024-09-04T22:29:43.000Z",
-  "versionId": "0bc38eb5-50d7-4d9e-8e39-04e0f49aa9d4"
+  "triggerCount": 2,
+  "updatedAt": "2024-09-04T22:42:47.000Z",
+  "versionId": "473b32a9-eca7-4132-9364-6ce1d99b0780"
 }
