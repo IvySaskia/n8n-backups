@@ -99,6 +99,31 @@
           }
         ]
       ]
+    },
+    "Sentiment Analysis": {
+      "main": [
+        [
+          {
+            "node": "Execute Workflow",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2024-08-29T23:04:03.482Z",
@@ -366,6 +391,25 @@
         900,
         300
       ]
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "ab9PwJhJXEw2g1FH",
+          "mode": "list",
+          "cachedResultName": "Advanced AI Demo (Presented at AI Developers #14 meetup)"
+        },
+        "options": {}
+      },
+      "id": "8e4e6bd6-9353-475d-beab-5b32233233bb",
+      "name": "Execute Workflow",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.1,
+      "position": [
+        1440,
+        -80
+      ]
     }
   ],
   "pinData": {},
@@ -373,8 +417,15 @@
     "executionOrder": "v1"
   },
   "staticData": null,
-  "tags": [],
+  "tags": [
+    {
+      "createdAt": "2024-09-10T18:01:11.133Z",
+      "updatedAt": "2024-09-10T18:01:11.133Z",
+      "id": "FugauSOpdwLAjgA7",
+      "name": "Testing Modules"
+    }
+  ],
   "triggerCount": 0,
-  "updatedAt": "2024-09-04T19:28:19.000Z",
-  "versionId": "a62a5fd4-e00a-4bc0-a12f-16c3c93eae68"
+  "updatedAt": "2024-09-10T18:01:12.000Z",
+  "versionId": "67b8dbb9-fd97-400a-9144-1c171b85a149"
 }
