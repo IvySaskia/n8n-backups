@@ -1,0 +1,129 @@
+{
+  "active": false,
+  "connections": {
+    "Humantic AI": {
+      "main": [
+        [
+          {
+            "node": "Humantic AI1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Humantic AI1": {
+      "main": [
+        [
+          {
+            "node": "Notion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calendly Trigger": {
+      "main": [
+        [
+          {
+            "node": "Humantic AI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-09-11T02:01:26.139Z",
+  "id": "aChc59g1KcFcl3Zn",
+  "meta": {
+    "templateId": "1107"
+  },
+  "name": "Enrich and manage candidates data in Notion",
+  "nodes": [
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": "",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Name|title",
+              "title": "={{$json[\"display_name\"]}}"
+            }
+          ]
+        },
+        "blockUi": {
+          "blockValues": [
+            {
+              "textContent": "=Name: {{$json[\"display_name\"]}}\nPersonality: {{$json[\"personality_analysis\"][\"summary\"][\"ocean\"][\"description\"].join(', ')}}, {{$json[\"personality_analysis\"][\"summary\"][\"disc\"][\"description\"].join(', ')}}\nOpenness: {{$json[\"personality_analysis\"][\"ocean_assessment\"][\"openness\"][\"level\"]}} {{$json[\"personality_analysis\"][\"ocean_assessment\"][\"openness\"][\"score\"]}}\nCalculativeness: {{$json[\"personality_analysis\"][\"disc_assessment\"][\"calculativeness\"][\"level\"]}} {{$json[\"personality_analysis\"][\"disc_assessment\"][\"calculativeness\"][\"score\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Notion",
+      "type": "n8n-nodes-base.notion",
+      "position": [
+        980,
+        240
+      ],
+      "typeVersion": 1,
+      "id": "9c74aeb3-a3a0-4da0-9fbb-78601d24cfea"
+    },
+    {
+      "parameters": {
+        "userId": "={{$json[\"payload\"][\"questions_and_responses\"][\"1_response\"]}}"
+      },
+      "name": "Humantic AI",
+      "type": "n8n-nodes-base.humanticAi",
+      "position": [
+        580,
+        240
+      ],
+      "typeVersion": 1,
+      "id": "4bcfb294-76a1-48db-8517-692c6248bc8b"
+    },
+    {
+      "parameters": {
+        "events": [
+          "invitee.created"
+        ]
+      },
+      "name": "Calendly Trigger",
+      "type": "n8n-nodes-base.calendlyTrigger",
+      "position": [
+        380,
+        240
+      ],
+      "webhookId": "6d38c1f6-42ee-4f44-b424-20943075087b",
+      "typeVersion": 1,
+      "id": "2aade642-e4ca-47d3-978e-657f5eebfa82"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "userId": "={{$json[\"results\"][\"userid\"]}}",
+        "options": {}
+      },
+      "name": "Humantic AI1",
+      "type": "n8n-nodes-base.humanticAi",
+      "position": [
+        780,
+        240
+      ],
+      "typeVersion": 1,
+      "id": "ed898fc8-1c7c-4da9-b556-aba1aa8c0da0"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2024-09-11T02:01:26.139Z",
+  "versionId": "73adb4cc-f8e6-4a6b-bf73-120c7d4e0c8a"
+}
