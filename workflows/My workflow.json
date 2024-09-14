@@ -410,6 +410,45 @@
         1440,
         -80
       ]
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "sendTo": "notion.is.templates@gmail.com",
+        "subject": "hello world",
+        "emailType": "text",
+        "message": "holiwiw",
+        "options": {}
+      },
+      "id": "9e4b41cd-5127-421f-8ab3-eaee731f6c35",
+      "name": "Gmail",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        460,
+        -180
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleApi": {
+          "id": "n8mNA0r5JPxxlT0l",
+          "name": "Gmail account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## NO FUNCIONA",
+        "height": 299.5283018867924
+      },
+      "id": "7c7dbd56-56cf-4a69-9577-04af5ceca1dd",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        340,
+        -260
+      ]
     }
   ],
   "pinData": {},
@@ -426,6 +465,6 @@
     }
   ],
   "triggerCount": 0,
-  "updatedAt": "2024-09-10T18:01:12.000Z",
-  "versionId": "67b8dbb9-fd97-400a-9144-1c171b85a149"
+  "updatedAt": "2024-09-14T05:46:28.000Z",
+  "versionId": "ef1b2f13-2879-41f0-a912-be8a2b5dd0f4"
 }
