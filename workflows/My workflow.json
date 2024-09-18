@@ -108,20 +108,6 @@
             "type": "main",
             "index": 0
           }
-        ],
-        [
-          {
-            "node": "Merge",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "Merge",
-            "type": "main",
-            "index": 1
-          }
         ]
       ]
     }
@@ -291,23 +277,6 @@
     },
     {
       "parameters": {
-        "inputText": "hi, how are you I am Ivy",
-        "options": {
-          "categories": "Positive, Neutral, Negative",
-          "systemPromptTemplate": "You are highly intelligent and accurate sentiment analyzer. Analyze the sentiment of the provided text. Categorize it into one of the following: {categories}. Use the provided formatting instructions. Only output the JSON."
-        }
-      },
-      "id": "f444cb21-1db5-49e3-80b5-46cf28dcab4d",
-      "name": "Sentiment Analysis",
-      "type": "@n8n/n8n-nodes-langchain.sentimentAnalysis",
-      "typeVersion": 1,
-      "position": [
-        840,
-        120
-      ]
-    },
-    {
-      "parameters": {
         "rules": {
           "values": [
             {
@@ -388,8 +357,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatAwsBedrock",
       "typeVersion": 1,
       "position": [
-        900,
-        300
+        660,
+        240
       ]
     },
     {
@@ -449,6 +418,38 @@
         340,
         -260
       ]
+    },
+    {
+      "parameters": {
+        "inputText": "hi, how are you I am Ivy",
+        "options": {
+          "categories": "Positive, Neutral, Negative",
+          "systemPromptTemplate": "You are highly intelligent and accurate sentiment analyzer. Analyze the sentiment of the provided text. Categorize it into one of the following: {categories}. Use the provided formatting instructions. Only output the JSON."
+        }
+      },
+      "id": "f444cb21-1db5-49e3-80b5-46cf28dcab4d",
+      "name": "Sentiment Analysis",
+      "type": "@n8n/n8n-nodes-langchain.sentimentAnalysis",
+      "typeVersion": 1,
+      "position": [
+        740,
+        20
+      ]
+    },
+    {
+      "parameters": {
+        "public": true,
+        "options": {}
+      },
+      "id": "019e59bc-584d-4157-ae64-fb13ff220555",
+      "name": "When chat message received",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        1120,
+        20
+      ],
+      "webhookId": "e8ecf9d9-b564-4eac-81ea-85f8dc94928d"
     }
   ],
   "pinData": {},
@@ -465,6 +466,6 @@
     }
   ],
   "triggerCount": 0,
-  "updatedAt": "2024-09-14T05:46:28.000Z",
-  "versionId": "ef1b2f13-2879-41f0-a912-be8a2b5dd0f4"
+  "updatedAt": "2024-09-17T19:16:36.000Z",
+  "versionId": "afec45ca-37e9-4a93-a07c-a64dbc7c7e73"
 }
