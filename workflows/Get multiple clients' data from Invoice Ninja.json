@@ -1,0 +1,58 @@
+{
+  "active": false,
+  "connections": {
+    "On clicking 'execute'": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-09-26T03:42:15.845Z",
+  "id": "0mE5yp5hzgqqGCGI",
+  "meta": {
+    "templateId": "534"
+  },
+  "name": "Get multiple clients' data from Invoice Ninja",
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "On clicking 'execute'",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        380,
+        240
+      ],
+      "typeVersion": 1,
+      "id": "520ac249-9b49-449c-aeb1-0399b55ccfb6"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "options": {}
+      },
+      "name": "Invoice Ninja",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "position": [
+        570,
+        240
+      ],
+      "typeVersion": 1,
+      "id": "feae17a2-f035-49b3-83f8-4a2abfd3bd54"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2024-09-26T03:42:15.845Z",
+  "versionId": "e0280ca0-a172-48b5-8b73-444101e1bf5b"
+}
