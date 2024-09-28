@@ -1,110 +1,33 @@
 {
   "active": false,
   "connections": {
-    "Notion Trigger": {
-      "main": [
-        [
-          {
-            "node": "Notion",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "When clicking ‘Test workflow’": {
       "main": [
         [
           {
-            "node": "Sentiment Analysis",
+            "node": "Code",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Notion": {
+    "Code": {
       "main": [
         [
           {
-            "node": "Merge",
+            "node": "Summarize",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Merge": {
+    "Summarize": {
       "main": [
         [
           {
-            "node": "Notion1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Notion1": {
-      "main": [
-        [
-          {
-            "node": "Slack",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Slack": {
-      "main": [
-        [
-          {
-            "node": "Wait",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Wait": {
-      "main": [
-        [
-          {
-            "node": "Switch",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Switch": {
-      "main": [
-        [
-          {
-            "node": "Filter",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "AWS Bedrock Chat Model": {
-      "ai_languageModel": [
-        [
-          {
-            "node": "Sentiment Analysis",
-            "type": "ai_languageModel",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Sentiment Analysis": {
-      "main": [
-        [
-          {
-            "node": "Execute Workflow",
+            "node": "Rename Keys",
             "type": "main",
             "index": 0
           }
@@ -112,8 +35,8 @@
       ]
     }
   },
-  "createdAt": "2024-08-29T23:04:03.482Z",
-  "id": "p8zeDaXmOK9xVDdv",
+  "createdAt": "2024-09-27T19:30:26.636Z",
+  "id": "tcV4AWItnjKKGLPY",
   "meta": {
     "templateCredsSetupCompleted": true
   },
@@ -121,335 +44,70 @@
   "nodes": [
     {
       "parameters": {},
-      "id": "ff5b26e8-52db-40dd-b2ca-140330130113",
+      "id": "a64d70c4-9611-4ae0-9b16-e770666c8192",
       "name": "When clicking ‘Test workflow’",
       "type": "n8n-nodes-base.manualTrigger",
-      "position": [
-        320,
-        260
-      ],
-      "typeVersion": 1
-    },
-    {
-      "parameters": {
-        "pollTimes": {
-          "item": [
-            {
-              "mode": "everyMinute"
-            }
-          ]
-        },
-        "databaseId": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
-        }
-      },
-      "id": "b3e3fc71-9ae6-4a9d-b520-dab6f1073786",
-      "name": "Notion Trigger",
-      "type": "n8n-nodes-base.notionTrigger",
       "typeVersion": 1,
       "position": [
-        320,
-        500
+        800,
+        180
       ]
     },
     {
       "parameters": {
-        "resource": "databasePage",
-        "databaseId": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
-        },
-        "options": {}
+        "jsCode": "return [\n  {\n    \"query\": \"a\"\n  },\n  {\n    \"query\": \"b\"\n  },\n  {\n    \"query\": \"c\"\n  }\n]\n;"
       },
-      "id": "714f6f82-f584-4ff5-a814-68aa8e4a2d40",
-      "name": "Notion",
-      "type": "n8n-nodes-base.notion",
-      "typeVersion": 2.2,
+      "id": "8f49f95b-aebf-46b0-b261-4923416c36b0",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
       "position": [
-        540,
-        500
-      ]
-    },
-    {
-      "parameters": {},
-      "id": "201a3ac9-013f-496c-b651-bfe2ef479e2c",
-      "name": "Merge",
-      "type": "n8n-nodes-base.merge",
-      "typeVersion": 3,
-      "position": [
-        760,
-        500
+        1020,
+        180
       ]
     },
     {
       "parameters": {
-        "resource": "block",
-        "blockId": {
-          "__rl": true,
-          "mode": "url",
-          "value": ""
-        },
-        "blockUi": {
-          "blockValues": [
-            {
-              "type": "heading_3",
-              "richText": true
-            }
-          ]
-        }
-      },
-      "id": "d2a7813b-e028-476e-bce2-9d85513e0eaf",
-      "name": "Notion1",
-      "type": "n8n-nodes-base.notion",
-      "typeVersion": 2.2,
-      "position": [
-        980,
-        500
-      ]
-    },
-    {
-      "parameters": {
-        "messageType": "block",
-        "text": "message text",
-        "otherOptions": {
-          "includeLinkToWorkflow": true,
-          "unfurl_media": true,
-          "sendAsUser": ""
-        }
-      },
-      "id": "475f1f67-4674-4c1d-b5e9-90542798983c",
-      "name": "Slack",
-      "type": "n8n-nodes-base.slack",
-      "typeVersion": 2.2,
-      "position": [
-        1200,
-        500
-      ]
-    },
-    {
-      "parameters": {
-        "resume": "form",
-        "formTitle": "contact us",
-        "formDescription": "We'll back soon",
-        "formFields": {
+        "fieldsToSummarize": {
           "values": [
             {
-              "fieldLabel": "whats your answer?",
-              "fieldType": "dropdown",
-              "fieldOptions": {
-                "values": [
-                  {
-                    "option": "yes"
-                  },
-                  {
-                    "option": "no"
-                  },
-                  {
-                    "option": "maybe"
-                  }
-                ]
-              }
-            },
-            {
-              "fieldType": "dropdown",
-              "fieldOptions": {
-                "values": [
-                  {}
-                ]
-              }
+              "aggregation": "concatenate",
+              "field": "query",
+              "separateBy": ""
             }
           ]
         },
         "options": {}
       },
-      "id": "cde5aef8-8473-4ccb-9819-3d3f835f555d",
-      "name": "Wait",
-      "type": "n8n-nodes-base.wait",
-      "typeVersion": 1.1,
+      "id": "0f68cdbf-35e9-4b41-b187-1a428196329c",
+      "name": "Summarize",
+      "type": "n8n-nodes-base.summarize",
+      "typeVersion": 1,
       "position": [
-        1420,
-        500
-      ],
-      "webhookId": "613771bf-4c83-4c5b-8ccf-1d8bed1a6869"
+        1240,
+        180
+      ]
     },
     {
       "parameters": {
-        "rules": {
-          "values": [
+        "keys": {
+          "key": [
             {
-              "conditions": {
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict"
-                },
-                "conditions": [
-                  {
-                    "leftValue": "",
-                    "rightValue": "",
-                    "operator": {
-                      "type": "string",
-                      "operation": "equals"
-                    }
-                  }
-                ],
-                "combinator": "and"
-              }
-            },
-            {
-              "conditions": {
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict"
-                },
-                "conditions": [
-                  {
-                    "id": "d1258bac-ac2d-4417-ab95-bb5f691361d3",
-                    "leftValue": "",
-                    "rightValue": "",
-                    "operator": {
-                      "type": "object",
-                      "operation": "exists",
-                      "singleValue": true
-                    }
-                  }
-                ],
-                "combinator": "and"
-              },
-              "renameOutput": true
+              "currentKey": "concatenated_query",
+              "newKey": "query"
             }
           ]
         },
-        "options": {}
+        "additionalOptions": {}
       },
-      "id": "87fcc6f4-3028-45ab-990b-2ed154cbd257",
-      "name": "Switch",
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 3.1,
-      "position": [
-        1640,
-        500
-      ]
-    },
-    {
-      "parameters": {
-        "options": {}
-      },
-      "id": "838af20f-2d0f-4010-b5a4-e10c4fe7cea2",
-      "name": "Filter",
-      "type": "n8n-nodes-base.filter",
-      "typeVersion": 2.1,
-      "position": [
-        1860,
-        500
-      ]
-    },
-    {
-      "parameters": {
-        "options": {}
-      },
-      "id": "0a476dd1-df85-4704-ac23-d69ff6487a21",
-      "name": "AWS Bedrock Chat Model",
-      "type": "@n8n/n8n-nodes-langchain.lmChatAwsBedrock",
+      "id": "60dd8562-d8c0-42e5-a5e4-707d568605cb",
+      "name": "Rename Keys",
+      "type": "n8n-nodes-base.renameKeys",
       "typeVersion": 1,
       "position": [
-        660,
-        240
+        1460,
+        180
       ]
-    },
-    {
-      "parameters": {
-        "workflowId": {
-          "__rl": true,
-          "value": "ab9PwJhJXEw2g1FH",
-          "mode": "list",
-          "cachedResultName": "Advanced AI Demo (Presented at AI Developers #14 meetup)"
-        },
-        "options": {}
-      },
-      "id": "8e4e6bd6-9353-475d-beab-5b32233233bb",
-      "name": "Execute Workflow",
-      "type": "n8n-nodes-base.executeWorkflow",
-      "typeVersion": 1.1,
-      "position": [
-        1440,
-        -80
-      ]
-    },
-    {
-      "parameters": {
-        "authentication": "serviceAccount",
-        "sendTo": "notion.is.templates@gmail.com",
-        "subject": "hello world",
-        "emailType": "text",
-        "message": "holiwiw",
-        "options": {}
-      },
-      "id": "9e4b41cd-5127-421f-8ab3-eaee731f6c35",
-      "name": "Gmail",
-      "type": "n8n-nodes-base.gmail",
-      "typeVersion": 2.1,
-      "position": [
-        460,
-        -180
-      ],
-      "alwaysOutputData": true,
-      "credentials": {
-        "googleApi": {
-          "id": "n8mNA0r5JPxxlT0l",
-          "name": "Gmail account 2"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "content": "## NO FUNCIONA",
-        "height": 299.5283018867924
-      },
-      "id": "7c7dbd56-56cf-4a69-9577-04af5ceca1dd",
-      "name": "Sticky Note",
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        340,
-        -260
-      ]
-    },
-    {
-      "parameters": {
-        "inputText": "hi, how are you I am Ivy",
-        "options": {
-          "categories": "Positive, Neutral, Negative",
-          "systemPromptTemplate": "You are highly intelligent and accurate sentiment analyzer. Analyze the sentiment of the provided text. Categorize it into one of the following: {categories}. Use the provided formatting instructions. Only output the JSON."
-        }
-      },
-      "id": "f444cb21-1db5-49e3-80b5-46cf28dcab4d",
-      "name": "Sentiment Analysis",
-      "type": "@n8n/n8n-nodes-langchain.sentimentAnalysis",
-      "typeVersion": 1,
-      "position": [
-        740,
-        20
-      ]
-    },
-    {
-      "parameters": {
-        "public": true,
-        "options": {}
-      },
-      "id": "019e59bc-584d-4157-ae64-fb13ff220555",
-      "name": "When chat message received",
-      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
-      "typeVersion": 1.1,
-      "position": [
-        1120,
-        20
-      ],
-      "webhookId": "e8ecf9d9-b564-4eac-81ea-85f8dc94928d"
     }
   ],
   "pinData": {},
@@ -457,15 +115,8 @@
     "executionOrder": "v1"
   },
   "staticData": null,
-  "tags": [
-    {
-      "createdAt": "2024-09-10T18:01:11.133Z",
-      "updatedAt": "2024-09-10T18:01:11.133Z",
-      "id": "FugauSOpdwLAjgA7",
-      "name": "Testing Modules"
-    }
-  ],
+  "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2024-09-17T19:16:36.000Z",
-  "versionId": "afec45ca-37e9-4a93-a07c-a64dbc7c7e73"
+  "updatedAt": "2024-09-27T19:35:45.000Z",
+  "versionId": "53badef5-27c1-429e-9507-dc233cbdbd9d"
 }
