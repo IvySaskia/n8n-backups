@@ -1,0 +1,122 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Summarize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Summarize": {
+      "main": [
+        [
+          {
+            "node": "Rename Keys",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-09-27T19:30:26.636Z",
+  "id": "tcV4AWItnjKKGLPY",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Rename Keys Test",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "a64d70c4-9611-4ae0-9b16-e770666c8192",
+      "name": "When clicking ‘Test workflow’",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        800,
+        180
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n  {\n    \"query\": \"a\"\n  },\n  {\n    \"query\": \"b\"\n  },\n  {\n    \"query\": \"c\"\n  }\n]\n;"
+      },
+      "id": "8f49f95b-aebf-46b0-b261-4923416c36b0",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1020,
+        180
+      ]
+    },
+    {
+      "parameters": {
+        "fieldsToSummarize": {
+          "values": [
+            {
+              "aggregation": "concatenate",
+              "field": "query",
+              "separateBy": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0f68cdbf-35e9-4b41-b187-1a428196329c",
+      "name": "Summarize",
+      "type": "n8n-nodes-base.summarize",
+      "typeVersion": 1,
+      "position": [
+        1240,
+        180
+      ]
+    },
+    {
+      "parameters": {
+        "keys": {
+          "key": [
+            {
+              "currentKey": "concatenated_query",
+              "newKey": "query"
+            }
+          ]
+        },
+        "additionalOptions": {}
+      },
+      "id": "60dd8562-d8c0-42e5-a5e4-707d568605cb",
+      "name": "Rename Keys",
+      "type": "n8n-nodes-base.renameKeys",
+      "typeVersion": 1,
+      "position": [
+        1460,
+        180
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2024-10-14T14:15:23.000Z",
+  "versionId": "5ab61160-9525-42eb-867e-154d12875e51"
+}
