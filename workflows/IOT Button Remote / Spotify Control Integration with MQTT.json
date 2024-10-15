@@ -1,0 +1,975 @@
+{
+  "active": false,
+  "connections": {
+    "Filter": {
+      "main": [
+        [
+          {
+            "node": "Custom Function 2 - P3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Globals": {
+      "main": [
+        [
+          {
+            "node": "Remote Action -> Function Router",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Is Playing?": {
+      "main": [
+        [
+          {
+            "node": "Spotify Pause",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Spotify Resume",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Custom Function 1 - P1": {
+      "main": [
+        [
+          {
+            "node": "Custom Function 2 - P2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Custom Function 2 - P1": {
+      "main": [
+        [
+          {
+            "node": "Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Custom Function 2 - P2": {
+      "main": [
+        [
+          {
+            "node": "Custom Function 1 - P3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Individual Devices": {
+      "main": [
+        [
+          {
+            "node": "Select Device by Name to get device_id",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Route to Requested Function": {
+      "main": [
+        [
+          {
+            "node": "Spotify API - Volume up 5pct",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Spotify API - Volume down 5pct",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Is Playing?",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Custom Function 1 - P1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Custom Function 2 - P1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Oops. How was this reached?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Spotify API - Get Device Status": {
+      "main": [
+        [
+          {
+            "node": "Already playing on Target Device?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Already playing on Target Device?": {
+      "main": [
+        [
+          {
+            "node": "Route to Requested Function",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Spotify API - Get Available Devices",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Spotify API - Get Available Devices": {
+      "main": [
+        [
+          {
+            "node": "Extract Individual Devices",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Select Device by Name to get device_id": {
+      "main": [
+        [
+          {
+            "node": "Spotify API - Activate Target Playback Device",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Spotify API - Activate Target Playback Device": {
+      "main": [
+        [
+          {
+            "node": "Route to Requested Function",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Remote Action -> Function Router": {
+      "main": [
+        [
+          {
+            "node": "Spotify Prev",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Spotify Next",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Spotify API - Get Device Status",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Spotify API - Get Device Status",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Spotify API - Get Device Status",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Spotify API - Get Device Status",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Spotify API - Get Device Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-10-14T14:12:40.640Z",
+  "id": "zREsKOvAade2SLax",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "IOT Button Remote / Spotify Control Integration with MQTT",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "nextSong"
+      },
+      "id": "019c6c28-0bcf-481f-bc3e-1f85ffea6339",
+      "name": "Spotify Next",
+      "type": "n8n-nodes-base.spotify",
+      "position": [
+        920,
+        300
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "operation": "resume"
+      },
+      "id": "5bfdf1c3-a040-4bc5-ba91-e7d7fd2865e1",
+      "name": "Spotify Resume",
+      "type": "n8n-nodes-base.spotify",
+      "position": [
+        920,
+        1000
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "operation": "pause"
+      },
+      "id": "2a9fa23f-5b7b-4a4d-925c-9148e00e4b2e",
+      "name": "Spotify Pause",
+      "type": "n8n-nodes-base.spotify",
+      "position": [
+        920,
+        820
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "### Receive MQTT message from IKEA 5-button Switch, and route actions.",
+        "height": 291.1542012927053,
+        "width": 611.1911357340722
+      },
+      "id": "861cb9db-9da7-4f51-bd20-afe26485ac27",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -741,
+        395
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "https://api.spotify.com/v1/me/player/volume",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "spotifyOAuth2Api",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "=device_id",
+              "value": "={{ $json.device.id }}"
+            },
+            {
+              "name": "volume_percent",
+              "value": "={{ Math.min($json.device.volume_percent + 5, 100) }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c846d2c9-786e-49ef-a82d-c9eb6773492a",
+      "name": "Spotify API - Volume up 5pct",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        920,
+        460
+      ],
+      "typeVersion": 4.1,
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "https://api.spotify.com/v1/me/player/volume",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "spotifyOAuth2Api",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "device_id",
+              "value": "={{ $json.device.id }}"
+            },
+            {
+              "name": "volume_percent",
+              "value": "={{ Math.max($json.device.volume_percent - 5, 20) }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6150d6dd-a482-4bba-a784-45407e482ac1",
+      "name": "Spotify API - Volume down 5pct",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        920,
+        640
+      ],
+      "typeVersion": 4.1,
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "content": "### Find the target player device (or spotify device group) by name, and activate it.",
+        "height": 278.70214810442735,
+        "width": 906.3175117167951,
+        "color": 5
+      },
+      "id": "b36d57e2-96f8-49ce-a417-468d2f508f79",
+      "name": "Sticky Note8",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -740,
+        948.2274931489221
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "url": "https://api.spotify.com/v1/me/player/devices",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "spotifyOAuth2Api",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "4195e5db-e069-487a-aa39-d084822de7a8",
+      "name": "Spotify API - Get Available Devices",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -640,
+        1020
+      ],
+      "typeVersion": 4.1,
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "devices",
+        "options": {}
+      },
+      "id": "918f5ab4-52e9-4aa8-92d5-68b330a7b5bc",
+      "name": "Extract Individual Devices",
+      "type": "n8n-nodes-base.splitOut",
+      "position": [
+        -440,
+        1020
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "069d11c8-75a2-4a5c-81c4-e6f771ee4829",
+              "operator": {
+                "name": "filter.operator.equals",
+                "type": "string",
+                "operation": "equals"
+              },
+              "leftValue": "={{ $json.name }}",
+              "rightValue": "={{ $('Globals').first().json.target_spotify_playback_device_name }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1d235ac8-80ab-46d0-9a61-2b4d2a27df78",
+      "name": "Select Device by Name to get device_id",
+      "type": "n8n-nodes-base.filter",
+      "position": [
+        -240,
+        1020
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "https://api.spotify.com/v1/me/player/volume",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "spotifyOAuth2Api",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "volume_percent",
+              "value": "80"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "974a403b-7312-4d77-9976-41f84f3036d3",
+      "name": "Custom Function 1 - P1",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        500,
+        1180
+      ],
+      "typeVersion": 4.1,
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "id": "spotify:track:4PTG3Z6ehGkBFwjybzWkR8"
+      },
+      "id": "bc380a1a-6742-4a6d-adc5-d67cf990e115",
+      "name": "Custom Function 2 - P2",
+      "type": "n8n-nodes-base.spotify",
+      "position": [
+        700,
+        1180
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "operation": "nextSong"
+      },
+      "id": "49d9e197-5097-418b-8fd8-64f1df50050a",
+      "name": "Custom Function 1 - P3",
+      "type": "n8n-nodes-base.spotify",
+      "position": [
+        920,
+        1180
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "https://api.spotify.com/v1/me/player",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "spotifyOAuth2Api",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"device_ids\": [\n    \"{{ $('Select Device by Name to get device_id').first().json.id }}\"\n  ],\n  \"play\": true\n}",
+        "options": {}
+      },
+      "id": "aeecba93-1cb3-4185-9444-1bca806304c3",
+      "name": "Spotify API - Activate Target Playback Device",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -20,
+        1020
+      ],
+      "typeVersion": 4.1,
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "leftValue": "={{ $('MQTT Trigger - Ikea Remote Switch').first().json.message }}",
+                    "rightValue": "brightness_up_click"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "=volume_up"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "c0726ee0-31b2-48fd-a860-0b923d8c18e7",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "leftValue": "={{ $('MQTT Trigger - Ikea Remote Switch').first().json.message }}",
+                    "rightValue": "brightness_down_click"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "volume_down"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "569014d8-0db4-4126-a0dd-7264a3b6db51",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "leftValue": "={{ $('MQTT Trigger - Ikea Remote Switch').first().json.message }}",
+                    "rightValue": "toggle"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "play/pause"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "af6d07f3-0ac2-4c05-8535-26d618892b8b",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "leftValue": "={{ $('MQTT Trigger - Ikea Remote Switch').first().json.message }}",
+                    "rightValue": "brightness_up_hold"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "custom_function_1"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "a5e8ce30-4b18-450a-8b15-342a698fec61",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "leftValue": "={{ $('MQTT Trigger - Ikea Remote Switch').first().json.message }}",
+                    "rightValue": "brightness_down_hold"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "custom_function_2"
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "id": "8040bfb3-01f3-4f61-9b5d-b03ca33bc959",
+      "name": "Route to Requested Function",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        520,
+        760
+      ],
+      "typeVersion": 3
+    },
+    {
+      "parameters": {
+        "resource": "playlist",
+        "operation": "getUserPlaylists",
+        "returnAll": true
+      },
+      "id": "6548b394-8bf7-4a27-8e05-94c614a3d05c",
+      "name": "Custom Function 2 - P1",
+      "type": "n8n-nodes-base.spotify",
+      "position": [
+        460,
+        1360
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "f7b6844a-ad78-4f29-801b-cef817a42e94",
+              "operator": {
+                "name": "filter.operator.equals",
+                "type": "string",
+                "operation": "equals"
+              },
+              "leftValue": "={{ $json.name }}",
+              "rightValue": "={{ $('Globals').first().json.favorite_playlist_name }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4549bd56-5b79-48e3-b052-6afe67427a82",
+      "name": "Filter",
+      "type": "n8n-nodes-base.filter",
+      "position": [
+        660,
+        1360
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "2124b4d2-f929-459d-b285-3ac18df3ab60",
+              "name": "target_spotify_playback_device_name",
+              "type": "string",
+              "value": "My Smart-Speaker Playback Device"
+            },
+            {
+              "id": "b7f0468d-c5c3-4424-8db8-af823a10c7f0",
+              "name": "favorite_playlist_name",
+              "type": "string",
+              "value": "Discover Weekly"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "03f71656-7219-4d72-b92a-b8be9a4b615c",
+      "name": "Globals",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -480,
+        500
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "operation": "startMusic",
+        "id": "=spotify:playlist:{{ $json.id }}"
+      },
+      "id": "d4e1b3a0-a319-432d-b7d4-398cf4f88f35",
+      "name": "Custom Function 2 - P3",
+      "type": "n8n-nodes-base.spotify",
+      "position": [
+        880,
+        1360
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "id": "0a0b1fca-5494-4c55-9642-5b1a70c5159c",
+      "name": "Oops. How was this reached?",
+      "type": "n8n-nodes-base.noOp",
+      "position": [
+        700,
+        1020
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "url": "https://api.spotify.com/v1/me/player",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "spotifyOAuth2Api",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "device_id",
+              "value": "={{ $('Globals').first().json.target_spotify_playback_device_id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e71d045e-f293-41ff-b26d-0ec207f3e3bd",
+      "name": "Spotify API - Get Device Status",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        60,
+        600
+      ],
+      "typeVersion": 4.1,
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "92d0f5fc-0743-4ea7-aad3-c8b72481bb97",
+              "operator": {
+                "name": "filter.operator.equals",
+                "type": "string",
+                "operation": "equals"
+              },
+              "leftValue": "={{ $('Spotify API - Get Device Status').first().json.device.name }}",
+              "rightValue": "={{ $('Globals').first().json.target_spotify_playback_device_name }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "61d9ac64-656e-4c3a-9ac0-e5677f85b6f8",
+      "name": "Already playing on Target Device?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        260,
+        640
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "caa4edf5-6436-4416-92f7-febd63cd47c5",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              },
+              "leftValue": "={{ $('Spotify API - Get Device Status').first().json.is_playing && !$('Spotify API - Activate Target Playback Device').isExecuted }}",
+              "rightValue": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b004c7a0-1324-4b16-81bc-e2a522b61947",
+      "name": "Is Playing?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        760,
+        860
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "operation": "previousSong"
+      },
+      "id": "27aadcf9-492c-4012-9a78-4c1fd119898a",
+      "name": "Spotify Prev",
+      "type": "n8n-nodes-base.spotify",
+      "position": [
+        920,
+        140
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "topics": "zigbee2mqtt/MyIOTButton1234/action",
+        "options": {
+          "jsonParseBody": true
+        }
+      },
+      "id": "32d3de60-bc4c-409f-b600-1af87e568aa9",
+      "name": "MQTT Trigger - Remote Switch",
+      "type": "n8n-nodes-base.mqttTrigger",
+      "position": [
+        -660,
+        500
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $('MQTT Trigger - Ikea Remote Switch').first().json.message }}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "arrow_left_click",
+              "outputKey": "left"
+            },
+            {
+              "value2": "arrow_right_click",
+              "outputKey": "right"
+            },
+            {
+              "value2": "brightness_up_click",
+              "outputKey": "up"
+            },
+            {
+              "value2": "brightness_down_click",
+              "outputKey": "down"
+            },
+            {
+              "value2": "toggle",
+              "outputKey": "on_off"
+            },
+            {
+              "value2": "brightness_up_hold",
+              "outputKey": "custom_function_1"
+            },
+            {
+              "value2": "brightness_down_hold",
+              "outputKey": "custom_function_2"
+            }
+          ]
+        }
+      },
+      "id": "4dd9a49b-34cc-4686-be6f-cf4290dc578f",
+      "name": "Remote Action -> Function Router",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        -280,
+        480
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "content": "https://n8n.io/workflows/2383-iot-button-remote-spotify-control-integration-with-mqtt/"
+      },
+      "id": "df8e16fd-1979-4f6d-b4f4-72b82d798249",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1460,
+        800
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-09-10T18:01:11.133Z",
+      "updatedAt": "2024-09-10T18:01:11.133Z",
+      "id": "FugauSOpdwLAjgA7",
+      "name": "Testing Modules"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2024-10-14T14:13:43.000Z",
+  "versionId": "8ddf3ce4-b598-4e4f-9b9c-d0689e4152d8"
+}
