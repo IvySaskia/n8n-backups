@@ -1,16 +1,26 @@
 {
   "active": false,
   "connections": {
-    "When clicking ‘Test workflow’": {
+    "Code": {
       "main": [
         [
           {
-            "node": "HTTP Request",
+            "node": "Code1",
             "type": "main",
             "index": 0
           },
           {
-            "node": "Hacker News",
+            "node": "Code2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Code3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Code4",
             "type": "main",
             "index": 0
           }
@@ -20,6 +30,255 @@
     "HTTP Request": {
       "main": [
         [
+          {
+            "node": "Code5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "HTML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "XML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Customer Datastore (n8n training)1": {
+      "main": [
+        [
+          {
+            "node": "Date & Time1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time1": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger1": {
+      "main": [
+        [
+          {
+            "node": "Customer Datastore (n8n training)1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request3": {
+      "main": [
+        [
+          {
+            "node": "Extract From File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request5": {
+      "main": [
+        [
+          {
+            "node": "Convert to File1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File1": {
+      "main": [
+        [
+          {
+            "node": "Read/Write Files from Disk2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read/Write Files from Disk2": {
+      "main": [
+        [
+          {
+            "node": "Read/Write Files from Disk3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Customer Datastore (n8n training)": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code6": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "RSS Read",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code7": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request4": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Airtable2": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "HTTP Request6": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sort": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          },
           {
             "node": "If",
             "type": "main",
@@ -32,37 +291,50 @@
       "main": [
         [
           {
-            "node": "Code1",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Edit Fields",
+            "node": "Convert to File",
             "type": "main",
             "index": 0
           }
         ],
         [
           {
-            "node": "Code",
+            "node": "No Operation",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Edit Fields": {
+    "Loop Over Items1": {
       "main": [
         [
           {
-            "node": "Airtable2",
+            "node": "No Operation",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edit Fields",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Code": {
+    "Convert to File": {
+      "main": [
+        [
+          {
+            "node": "Gmail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail": {
       "main": [
         [
           {
@@ -73,22 +345,153 @@
         ]
       ]
     },
-    "Schedule Trigger": {
+    "Edit Fields": {
       "main": [
         [
           {
-            "node": "HTTP Request",
+            "node": "Date & Time",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Code1": {
+    "Date & Time": {
       "main": [
         [
           {
-            "node": "Edit Fields",
+            "node": "Convert to File2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File2": {
+      "main": [
+        [
+          {
+            "node": "Discord1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Discord1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Error Trigger": {
+      "main": [
+        [
+          {
+            "node": "Discord2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Airtable2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Airtable",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Code7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Customer Datastore (n8n training)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Code6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Customer Datastore (n8n training)1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Airtable1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge2": {
+      "main": [
+        [
+          {
+            "node": "Sort",
             "type": "main",
             "index": 0
           }
@@ -96,8 +499,8 @@
       ]
     }
   },
-  "createdAt": "2024-09-13T16:42:34.525Z",
-  "id": "OXENbdRctVLWq8I7",
+  "createdAt": "2024-09-13T21:01:13.610Z",
+  "id": "6e8QjrPLFQ0W4rIJ",
   "meta": {
     "templateCredsSetupCompleted": true
   },
@@ -105,77 +508,295 @@
   "nodes": [
     {
       "parameters": {},
-      "id": "d93ed6b8-66a7-45b6-b1fc-01c70f88c3ea",
+      "id": "6a01d770-cb26-4c6c-ba16-17e0ece65412",
       "name": "When clicking ‘Test workflow’",
       "type": "n8n-nodes-base.manualTrigger",
       "position": [
-        360,
-        260
+        -980,
+        1900
       ],
       "typeVersion": 1
     },
     {
       "parameters": {
-        "url": "https://internal.users.n8n.cloud/webhook/custom-erp",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
+        "jsCode": "var myContacts = [\n\t{\n\t\tjson: {\n\t\t\tname: 'Alice',\n\t\t\temail: {\n\t\t\t\tpersonal: 'alice@home.com',\n\t\t\t\twork: 'alice@wonderland.org'\n\t\t\t},\n\t\t}\n\t},\n\t{\n\t\tjson: {\n\t\t\tname: 'Bob',\n\t\t\temail: {\n\t\t\t\tpersonal: 'bob@mail.com',\n\t\t\t\twork: 'contact@thebuilder.com'\n\t\t\t\t},\n\t\t}\n\t},\n];\n\nreturn myContacts;"
+      },
+      "id": "5072c3d8-559b-4c1f-b626-8ecf8bdb8028",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        540,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## LEVEL 2\n\n[Level 2](https://docs.n8n.io/courses/level-two/)",
+        "height": 112.9464126114194,
+        "width": 150,
+        "color": 3
+      },
+      "id": "267dbbbb-69f9-460c-9080-8059799f9ddb",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1280,
+        1960
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "let items = $input.all();\nitems[0].json.workEmail = items[0].json.email['work'];\nreturn items;"
+      },
+      "id": "ff888fbd-4c40-4f50-b1d0-979fc372c6cd",
+      "name": "Code1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        780,
+        20
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return $input.all().map(item => {\n\treturn {\n\t\tjson: item\n\t}\n});"
+      },
+      "id": "69194621-2c42-4096-b8d1-78890816de44",
+      "name": "Code2",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        780,
+        180
+      ],
+      "notesInFlow": true,
+      "notes": "To create multiple items from a single item"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n\t{\n    \tjson: {\n    \t\tdata_object: $input.all().map(item => item.json)\n    \t}\n    }\n  ];"
+      },
+      "id": "37c983b6-fafe-4bba-9b71-ef6da58b163f",
+      "name": "Code3",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        780,
+        380
+      ],
+      "notesInFlow": true,
+      "notes": "To create a single item from multiple items"
+    },
+    {
+      "parameters": {
+        "jsCode": "let items = $input.all();\nreturn items[0].json.workEmail.map(item => {\n\treturn {\n\t\tjson: item\n\t}\n});"
+      },
+      "id": "12089835-20c0-46c1-9ae0-95528c25bed9",
+      "name": "Code4",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        780,
+        580
+      ],
+      "notesInFlow": true,
+      "disabled": true,
+      "notes": "NOT WORKING"
+    },
+    {
+      "parameters": {
+        "url": "https://api.quotable.io/quotes",
+        "options": {
+          "allowUnauthorizedCerts": true
+        }
+      },
+      "id": "42d8ab4a-9f62-42e5-ba20-1a1da4e58934",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        540,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "results",
+        "options": {}
+      },
+      "id": "4865fd0c-07cd-4e3c-bd92-9705d2f53a20",
+      "name": "Split Out",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        760,
+        800
+      ],
+      "notes": "OPTION A - Transform the data in the results field with the Split Out node."
+    },
+    {
+      "parameters": {
+        "jsCode": "let items = $input.all();\nreturn items[0].json.results.map(item => {\n\treturn {\n\t\tjson: item\n\t}\n});"
+      },
+      "id": "401519c6-679b-4d94-b8cc-7b7931e926cc",
+      "name": "Code5",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        760,
+        1020
+      ],
+      "notes": "OPTION B - Transform the data in the results field with the Code node."
+    },
+    {
+      "parameters": {
+        "url": "https://blog.n8n.io/",
+        "options": {}
+      },
+      "id": "63e7c205-e010-4c9a-aa6c-9fafd4f6720e",
+      "name": "HTTP Request1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        540,
+        1300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "extractHtmlContent",
+        "extractionValues": {
+          "values": [
             {
-              "name": "unique_id",
-              "value": "7d2c994763d457acf9f0f7cb0b6c907a"
+              "key": "title",
+              "cssSelector": ".item-title a",
+              "returnValue": "html"
+            },
+            {
+              "key": "url",
+              "cssSelector": ".item-title a",
+              "returnValue": "attribute",
+              "attribute": "href"
             }
           ]
         },
         "options": {}
       },
-      "id": "cd741086-fcec-4e36-8829-06d69023d22e",
-      "name": "HTTP Request",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
+      "id": "ba2a7a79-1e1f-40c2-a3a7-ad8933ea20e7",
+      "name": "HTML",
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
       "position": [
-        580,
-        260
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "ZToP3wjogX0YQtkQ",
-          "name": "Header Auth account"
-        }
-      }
+        760,
+        1300
+      ]
     },
     {
       "parameters": {
-        "resource": "all",
-        "limit": 10,
-        "additionalFields": {
-          "keyword": "automation"
-        }
-      },
-      "id": "3ae599b0-3551-40b2-8d1c-fd71704be560",
-      "name": "Hacker News",
-      "type": "n8n-nodes-base.hackerNews",
-      "typeVersion": 1,
-      "position": [
-        580,
-        560
-      ],
-      "notesInFlow": true,
-      "disabled": true
-    },
-    {
-      "parameters": {
-        "content": "## LEVEL 1\n[Level 1](https://docs.n8n.io/courses/level-one/)",
+        "content": "HTML Exercise",
+        "height": 198.30701091487873,
+        "width": 436.67412018566813,
         "color": 6
       },
-      "id": "19b60612-03f7-4788-bf55-3ca144f79e86",
-      "name": "Sticky Note",
+      "id": "bd26c5ff-651c-4371-93e6-d62d25df01e9",
+      "name": "Sticky Note1",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        80,
-        220
+        499.60050504927716,
+        1260
+      ]
+    },
+    {
+      "parameters": {
+        "content": "XML Exercise",
+        "height": 198.30701091487873,
+        "width": 420.6913383797822,
+        "color": 5
+      },
+      "id": "ce7d1868-b1e1-48db-804f-dae7eca136d2",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        500,
+        1500
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.quotable.io/quotes",
+        "options": {
+          "allowUnauthorizedCerts": true
+        }
+      },
+      "id": "b438e736-682b-4dff-8ca6-71cfb345e928",
+      "name": "HTTP Request2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        540,
+        1540
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "jsonToxml",
+        "options": {}
+      },
+      "id": "294de1cc-4803-45e5-a5bc-e98173689b00",
+      "name": "XML",
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        760,
+        1540
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "a1fb896e-3a2c-4756-99db-c25cf080d6bd",
+      "name": "No Operation, do nothing",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        2200
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "getAllPeople",
+        "returnAll": true
+      },
+      "id": "2b37c47c-3385-493b-9526-8194b832c19f",
+      "name": "Customer Datastore (n8n training)1",
+      "type": "n8n-nodes-base.n8nTrainingCustomerDatastore",
+      "typeVersion": 1,
+      "position": [
+        460,
+        2060
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "roundDate",
+        "date": "={{ $json.created }}",
+        "mode": "roundUp",
+        "outputFieldName": "new-date",
+        "options": {
+          "includeInputFields": true
+        }
+      },
+      "id": "0e5a0f5f-f73c-40de-8426-5663e177f608",
+      "name": "Date & Time1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        700,
+        2060
       ]
     },
     {
@@ -188,23 +809,12 @@
           },
           "conditions": [
             {
-              "id": "655b8992-381e-41fd-85a0-efc8753bb403",
-              "leftValue": "={{$json[\"orderStatus\"]}}",
-              "rightValue": "processing",
+              "id": "7c82823a-e603-4166-8866-493f643ba354",
+              "leftValue": "={{ $json['new-date'] }}",
+              "rightValue": "1960-01-01T00:00:00",
               "operator": {
-                "type": "string",
-                "operation": "equals",
-                "name": "filter.operator.equals"
-              }
-            },
-            {
-              "id": "f4dc0a83-c491-4d21-b1c7-c8018e10abd4",
-              "leftValue": "={{ $json.employeeName }}",
-              "rightValue": "Mario",
-              "operator": {
-                "type": "string",
-                "operation": "equals",
-                "name": "filter.operator.equals"
+                "type": "dateTime",
+                "operation": "after"
               }
             }
           ],
@@ -212,89 +822,410 @@
         },
         "options": {}
       },
-      "id": "5456ee75-2f94-46cd-8c8f-ef227fd64a2c",
-      "name": "If",
+      "id": "282f2b35-785c-4233-a8dc-bf377eea2e5c",
+      "name": "If1",
       "type": "n8n-nodes-base.if",
-      "typeVersion": 2.1,
+      "typeVersion": 2,
       "position": [
-        820,
-        260
+        900,
+        2060
       ]
+    },
+    {
+      "parameters": {
+        "amount": 1,
+        "unit": "minutes"
+      },
+      "id": "dec32b9b-af05-4634-b91a-7b307c5a2be3",
+      "name": "Wait1",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1100,
+        1960
+      ],
+      "webhookId": "be78732e-787d-463e-9210-2c7e8239761e"
     },
     {
       "parameters": {
         "assignments": {
           "assignments": [
             {
-              "id": "7a3e8458-7807-47ff-aed9-73542fd83b65",
-              "name": "orderID",
-              "value": "={{ $json.orderID }}",
-              "type": "number"
-            },
-            {
-              "id": "919d8bb3-25a9-4741-990e-5559ca3a15dd",
-              "name": "employeeName",
-              "value": "={{ $json.employeeName }}",
+              "id": "e058832a-2461-4c6d-b584-043ecc036427",
+              "name": "outputValue",
+              "value": "={{ $json['new-date'] }}",
               "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "id": "4a42a178-edd1-4568-a6e8-8826996ba4af",
+      "name": "Edit Fields1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1320,
+        1960
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 30
+            }
+          ]
+        }
+      },
+      "id": "48a6a269-e2b2-4b66-93ba-964516b44f1d",
+      "name": "Schedule Trigger1",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        240,
+        1840
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "options": {}
+      },
+      "id": "edd6d7c3-8eea-434a-9155-d5015b86bbbb",
+      "name": "Extract From File",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        720,
+        2560
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://media.kaspersky.com/pdf/Kaspersky_Lab_Whitepaper_Anti_blocker.pdf",
+        "options": {}
+      },
+      "id": "41ee9dbf-63ff-40bf-810e-80e2b6f1bb60",
+      "name": "HTTP Request3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        500,
+        2560
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Binary Exercise 1",
+        "height": 220.43164166087098,
+        "width": 496.83447705870174
+      },
+      "id": "235ad8f0-235a-4b1c-a764-69dfb1862fc5",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        420,
+        2520
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Binary Exercise 2",
+        "height": 250.36158680861377,
+        "width": 984.2353220519717
+      },
+      "id": "f371793c-5f87-4b39-b149-72a6f78fa4f1",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        420,
+        2860
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://poetrydb.org/random/1",
+        "options": {}
+      },
+      "id": "fd8d15b7-e560-40b8-bbc3-cc443fcbce46",
+      "name": "HTTP Request5",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        500,
+        2920
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "toJson",
+        "options": {}
+      },
+      "id": "d853334b-9bba-4dc3-823a-beebb8506844",
+      "name": "Convert to File1",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1,
+      "position": [
+        700,
+        2920
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "/tmp/poetrydb.json",
+        "options": {}
+      },
+      "id": "7f169368-9f89-4a20-8b28-e8c41b57f17e",
+      "name": "Read/Write Files from Disk2",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        900,
+        2920
+      ]
+    },
+    {
+      "parameters": {
+        "fileSelector": "={{ $json.fileName }}",
+        "options": {}
+      },
+      "id": "eed7cd41-14cc-4215-aa13-1379121fdb48",
+      "name": "Read/Write Files from Disk3",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        2920
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "mergeByFields": {
+          "values": [
+            {
+              "field1": "name",
+              "field2": "name"
             }
           ]
         },
         "options": {}
       },
-      "id": "da71c79b-18e0-4312-90f3-cdefd4a92f98",
-      "name": "Edit Fields",
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4,
+      "id": "29863d8e-f4a4-4414-8a79-c04648feafdb",
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2.1,
       "position": [
-        1340,
-        160
+        760,
+        3480
       ]
     },
     {
       "parameters": {
-        "jsCode": "let items = $input.all();\nlet totalBooked = items.length;\nlet bookedSum = 0;\n\nfor(let i=0; i < items.length; i++) {\n  bookedSum = bookedSum + items[i].json.orderPrice;\n}\nreturn [{json:{totalBooked, bookedSum}}];"
+        "operation": "getAllPeople"
       },
-      "id": "4a9d35c7-b18a-41e5-8fd7-da0a5f837ee6",
-      "name": "Code",
+      "id": "fdd01480-2a8a-4734-9291-0ae84790c6c2",
+      "name": "Customer Datastore (n8n training)",
+      "type": "n8n-nodes-base.n8nTrainingCustomerDatastore",
+      "typeVersion": 1,
+      "position": [
+        540,
+        3360
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n  {\n    'name': 'Jay Gatsby',\n    'language': 'English',\n    'country': {\n      'code': 'US',\n      'name': 'United States'\n    }\n    \n  }\n  \n];"
+      },
+      "id": "5eea83bd-666f-4366-831b-c683e58ccd21",
+      "name": "Code6",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1100,
-        380
+        540,
+        3620
       ]
     },
     {
       "parameters": {
-        "operation": "create",
+        "content": "## Merge Exercise\n\nhttps://docs.n8n.io/courses/level-two/chapter-3/",
+        "height": 515.2509263964284,
+        "width": 586.1419282836995,
+        "color": 5
+      },
+      "id": "834f7955-6391-4530-b9d9-970bd78bfa12",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        420,
+        3260
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "1b2a23ac-3273-48b4-968f-aeb95e866965",
+      "name": "Loop Over Items",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        780,
+        4020
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "options": {}
+      },
+      "id": "e0b7496f-2c53-4c77-8ba7-83c07ea37ac1",
+      "name": "RSS Read",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        4020
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "let urls = [\n  {\n    json: {\n      url: 'https://medium.com/feed/n8n-io'\n    }\n  },\n  {\n   json: {\n     url: 'https://dev.to/feed/n8n'\n   } \n  }\n]\n\nreturn urls;"
+      },
+      "id": "a0e09dc2-4844-44e9-858a-c5370ea7dcc8",
+      "name": "Code7",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        560,
+        4020
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Loop/Batch Exercise",
+        "height": 262.39533564070297,
+        "width": 795.2427895654859,
+        "color": 6
+      },
+      "id": "d9d77df8-aae8-4aab-bb07-d0d3edd8fad7",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        420,
+        3940
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Workflow 1: Merging data",
+        "height": 499.1488446867043,
+        "width": 752.2352186274168,
+        "color": 3
+      },
+      "id": "958a4805-0bfc-4bcc-904a-b0ec6e1af999",
+      "name": "Sticky Note7",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        420,
+        4320
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "search",
         "base": {
           "__rl": true,
-          "value": "appq0K6ctwbu51LxZ",
+          "value": "applNoEekWkg0w3bg",
           "mode": "list",
-          "cachedResultName": "beginner course",
-          "cachedResultUrl": "https://airtable.com/appq0K6ctwbu51LxZ"
+          "cachedResultName": "REST Countries - N8N",
+          "cachedResultUrl": "https://airtable.com/applNoEekWkg0w3bg"
         },
         "table": {
           "__rl": true,
-          "value": "tblPR7t36SQZGMAsg",
+          "value": "tblZw6078VUi63Md0",
           "mode": "list",
-          "cachedResultName": "orders",
-          "cachedResultUrl": "https://airtable.com/appq0K6ctwbu51LxZ/tblPR7t36SQZGMAsg"
+          "cachedResultName": "customers",
+          "cachedResultUrl": "https://airtable.com/applNoEekWkg0w3bg/tblZw6078VUi63Md0"
+        },
+        "options": {}
+      },
+      "id": "a52c3ba8-0e4a-4109-a3d7-77af3f4d1c91",
+      "name": "Airtable",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        480,
+        4420
+      ],
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "LcmcO2YtnFioIe45",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://restcountries.com/v3.1/all",
+        "options": {}
+      },
+      "id": "eca5939d-d97a-4f25-87a0-bc822ae5cc3b",
+      "name": "HTTP Request4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        480,
+        4640
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "base": {
+          "__rl": true,
+          "value": "applNoEekWkg0w3bg",
+          "mode": "list",
+          "cachedResultName": "REST Countries - N8N",
+          "cachedResultUrl": "https://airtable.com/applNoEekWkg0w3bg"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblZw6078VUi63Md0",
+          "mode": "list",
+          "cachedResultName": "customers",
+          "cachedResultUrl": "https://airtable.com/applNoEekWkg0w3bg/tblZw6078VUi63Md0"
         },
         "columns": {
-          "mappingMode": "autoMapInputData",
-          "value": {},
-          "matchingColumns": [],
+          "mappingMode": "defineBelow",
+          "value": {
+            "customerID": "={{ $json.customerID }}",
+            "region": "={{ $json.region }}",
+            "subregion": "={{ $json.subregion }}"
+          },
+          "matchingColumns": [
+            "customerID"
+          ],
           "schema": [
             {
-              "id": "orderID",
-              "displayName": "orderID",
+              "id": "id",
+              "displayName": "id",
               "required": false,
-              "defaultMatch": false,
-              "canBeUsedToMatch": true,
+              "defaultMatch": true,
               "display": true,
-              "type": "number",
-              "readOnly": false,
-              "removed": false
+              "type": "string",
+              "readOnly": true,
+              "removed": true
             },
             {
               "id": "customerID",
@@ -308,8 +1239,41 @@
               "removed": false
             },
             {
-              "id": "employeeName",
-              "displayName": "employeeName",
+              "id": "customerCountry",
+              "displayName": "customerCountry",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "customerEmail",
+              "displayName": "customerEmail",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "customerSince",
+              "displayName": "customerSince",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "dateTime",
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "region",
+              "displayName": "region",
               "required": false,
               "defaultMatch": false,
               "canBeUsedToMatch": true,
@@ -319,19 +1283,8 @@
               "removed": false
             },
             {
-              "id": "orderPrice",
-              "displayName": "orderPrice",
-              "required": false,
-              "defaultMatch": false,
-              "canBeUsedToMatch": true,
-              "display": true,
-              "type": "number",
-              "readOnly": false,
-              "removed": false
-            },
-            {
-              "id": "orderStatus",
-              "displayName": "orderStatus",
+              "id": "subregion",
+              "displayName": "subregion",
               "required": false,
               "defaultMatch": false,
               "canBeUsedToMatch": true,
@@ -344,13 +1297,13 @@
         },
         "options": {}
       },
-      "id": "b8a76994-7775-434a-a19a-64e43e7ce22c",
-      "name": "Airtable2",
+      "id": "52bbc5b2-fb45-4966-9d7c-ce3c1c1d227d",
+      "name": "Airtable1",
       "type": "n8n-nodes-base.airtable",
       "typeVersion": 2.1,
       "position": [
-        1560,
-        160
+        980,
+        4560
       ],
       "credentials": {
         "airtableTokenApi": {
@@ -361,83 +1314,430 @@
     },
     {
       "parameters": {
-        "authentication": "webhook",
-        "content": "=Ivy This week we've {{$json[\"totalBooked\"]}} booked orders with a total value of {{$json[\"bookedSum\"]}}. My Unique ID: {{ $('HTTP Request').params[\"headerParameters\"][\"parameters\"][0][\"value\"] }}",
+        "content": "## Workflow 2: Generating reports\n",
+        "height": 721.3535089384658,
+        "width": 1948.2191468060162,
+        "color": 3
+      },
+      "id": "471e3a57-8786-479b-9bfd-9d763f3b032a",
+      "name": "Sticky Note8",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        420,
+        4960
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "base": {
+          "__rl": true,
+          "value": "applNoEekWkg0w3bg",
+          "mode": "list",
+          "cachedResultName": "REST Countries - N8N",
+          "cachedResultUrl": "https://airtable.com/applNoEekWkg0w3bg"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblZw6078VUi63Md0",
+          "mode": "list",
+          "cachedResultName": "customers",
+          "cachedResultUrl": "https://airtable.com/applNoEekWkg0w3bg/tblZw6078VUi63Md0"
+        },
         "options": {}
       },
-      "id": "6d820ae0-a3b9-44c9-93ec-8e3e3ca2a98e",
-      "name": "Discord",
-      "type": "n8n-nodes-base.discord",
-      "typeVersion": 2,
+      "id": "498c1844-ddb0-4f0b-82ce-1d4e5409c1e1",
+      "name": "Airtable2",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
       "position": [
-        1320,
-        380
+        520,
+        5360
       ],
       "credentials": {
-        "discordWebhookApi": {
-          "id": "48N3rSIKg1EkK9vD",
-          "name": "Discord Webhook N8N"
+        "airtableTokenApi": {
+          "id": "LcmcO2YtnFioIe45",
+          "name": "Airtable Personal Access Token account"
         }
       }
     },
     {
       "parameters": {
-        "rule": {
-          "interval": [
+        "url": "https://internal.users.n8n.cloud/webhook/level2-erp",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "field": "weeks",
-              "triggerAtDay": [
-                1
-              ],
-              "triggerAtHour": 9
+              "name": "unique_id",
+              "value": "recFf1vA8TR4WAVj0"
             }
           ]
-        }
+        },
+        "options": {}
       },
-      "id": "819f287d-372b-4f81-a659-a4f6ed04bae5",
-      "name": "Schedule Trigger",
-      "type": "n8n-nodes-base.scheduleTrigger",
-      "typeVersion": 1.2,
+      "id": "919854ac-8e7a-4cad-9997-8915228f3015",
+      "name": "HTTP Request6",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
       "position": [
-        360,
-        60
+        520,
+        5080
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "ZToP3wjogX0YQtkQ",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "orderPrice",
+              "order": "descending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9a2a88b1-93f3-4e11-90a2-ab56b8551567",
+      "name": "Sort",
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        1020,
+        5260
       ]
     },
     {
       "parameters": {
-        "jsCode": "let items = $input.all();\nlet totalBooked = items.length;\nlet bookedSum = 0;\n\nfor(let i=0; i < items.length; i++) {\n  bookedSum = bookedSum + items[i].json.orderPrice;\n}\nreturn [{json:{totalBooked, bookedSum}}];"
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "d4ed00e6-cd10-44d1-8bc4-80b814ce0d46",
+              "leftValue": "={{ $json.region }}",
+              "rightValue": "Americas",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
       },
-      "id": "e044c08e-7e50-41b5-adab-fa6e33e4f6bc",
-      "name": "Code1",
-      "type": "n8n-nodes-base.code",
+      "id": "8dbd37d7-effb-4409-90c7-d87f958daac9",
+      "name": "If",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.1,
+      "position": [
+        1220,
+        5080
+      ]
+    },
+    {
+      "parameters": {
+        "batchSize": 5,
+        "options": {}
+      },
+      "id": "3c0cbeaf-20bb-4b0b-86a2-3dddc58c899f",
+      "name": "Loop Over Items1",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1240,
+        5360
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "toJson",
+        "mode": "each",
+        "options": {
+          "fileName": "=order {{ $json.orderID }}"
+        }
+      },
+      "id": "8b608c9a-576b-41a4-8b21-d56a4de6f5e2",
+      "name": "Convert to File",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1460,
+        5060
+      ]
+    },
+    {
+      "parameters": {
+        "sendTo": "notion.is.templates@gmail.com",
+        "subject": "hello world",
+        "emailType": "text",
+        "message": "hola",
+        "options": {
+          "attachmentsUi": {
+            "attachmentsBinary": [
+              {}
+            ]
+          }
+        }
+      },
+      "id": "3a59b745-e370-472c-a012-c91749561525",
+      "name": "Gmail",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1680,
+        5060
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "t4gm6OPLAh0HmHLq",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "=I sent the file using email with the label ID {{ $json.id }} . My ID: {{ $('HTTP Request6').params[\"headerParameters\"][\"parameters\"][0][\"value\"] }}",
+        "options": {}
+      },
+      "id": "e5977d92-e88f-4728-a2cb-e5a83ccd79b0",
+      "name": "Discord",
+      "type": "n8n-nodes-base.discord",
       "typeVersion": 2,
       "position": [
-        1100,
-        60
+        1900,
+        5060
+      ],
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "lyTeNtZR9Hb4Ao4P",
+          "name": "Discord n8n Level 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "9fbf015f-a9fd-4f2e-befb-96322ba03c81",
+              "name": "customerEmail",
+              "value": "={{ $json.customerEmail }}",
+              "type": "string"
+            },
+            {
+              "id": "2c8201d1-6121-404e-9c57-657e9bcddff3",
+              "name": "customerRegion",
+              "value": "={{ $json.region }}",
+              "type": "string"
+            },
+            {
+              "id": "bf684854-51ea-454b-8da6-6817b9a1ebc1",
+              "name": "customerSince",
+              "value": "={{ $json.customerSince }}",
+              "type": "string"
+            },
+            {
+              "id": "34e09c8a-d86c-47a9-998c-a18747696b22",
+              "name": "orderPrice",
+              "value": "={{ $json.orderPrice }}",
+              "type": "number"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2e8a16aa-2bf0-404a-bec9-c8009b6b6181",
+      "name": "Edit Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1460,
+        5460
       ]
+    },
+    {
+      "parameters": {
+        "operation": "formatDate",
+        "date": "={{ $json.customerSince }}",
+        "options": {
+          "includeInputFields": true
+        }
+      },
+      "id": "28a4aaad-0061-4e63-9a48-df0ba9901dbb",
+      "name": "Date & Time",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        1680,
+        5460
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "fileName": "={{$runIndex > 0 ? 'file_low_orders':'file_high_orders'}}",
+          "headerRow": false
+        }
+      },
+      "id": "b4906fd2-0e13-4dff-a305-b1221df73fc5",
+      "name": "Convert to File2",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1900,
+        5460
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "=---I created the spreadsheet {{ $binary.data.fileName }}. My ID:{{ $('HTTP Request6').params[\"headerParameters\"][\"parameters\"][0][\"value\"] }}",
+        "options": {}
+      },
+      "id": "0ec54763-7f85-47b7-9813-5ecdb20df570",
+      "name": "Discord1",
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        2120,
+        5460
+      ],
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "lyTeNtZR9Hb4Ao4P",
+          "name": "Discord n8n Level 2"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "2da4ea0a-7dda-42db-906e-e3f88e13fe5d",
+      "name": "No Operation",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1460,
+        5240
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Workflow 3: Monitoring workflow errors\n",
+        "height": 358.0551210845782,
+        "width": 649.2814932067323,
+        "color": 3
+      },
+      "id": "43c19f8d-81a4-40fe-9220-921c5731bfbe",
+      "name": "Sticky Note9",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        440,
+        5800
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "81a9a606-5edc-4153-820d-c8a5057093c4",
+      "name": "Error Trigger",
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        580,
+        5940
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "=The workflow {{ $json.workflow.name }} failed, with the error message: {{ $json.execution.error.message }}. Last node executed: {{ $json.execution.lastNodeExecuted }}. Check this workflow execution here: {{ $json.execution.url }} My Unique ID: {{ $json.execution.id }}",
+        "options": {}
+      },
+      "id": "19b9e59a-23e8-4749-afdb-8be767b7ea42",
+      "name": "Discord2",
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        800,
+        5940
+      ],
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "lO0lnSQVpNzNYcNv",
+          "name": "Discord Webhook account - Ycel e Ivy Server"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "advanced": true,
+        "mergeByFields": {
+          "values": [
+            {
+              "field1": "customerCountry",
+              "field2": "=name.common"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a3a5e633-7e59-4e16-9281-90a3b4b89b49",
+      "name": "Merge1",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        760,
+        4560
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "fieldsToMatchString": "customerID",
+        "options": {}
+      },
+      "id": "f9c66d5a-a536-43be-b3aa-3b89eac7b2ba",
+      "name": "Merge2",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        780,
+        5260
+      ],
+      "alwaysOutputData": true
     }
   ],
   "pinData": {},
   "settings": {
-    "executionOrder": "v1",
-    "saveManualExecutions": true,
-    "callerPolicy": "workflowsFromSameOwner",
-    "saveExecutionProgress": true
+    "executionOrder": "v1"
   },
-  "staticData": {
-    "node:Schedule Trigger": {
-      "recurrenceRules": []
-    }
-  },
+  "staticData": null,
   "tags": [
     {
-      "createdAt": "2024-09-13T19:25:45.046Z",
-      "updatedAt": "2024-09-13T19:25:45.046Z",
-      "id": "FSM763DI4O0MPAyM",
-      "name": "Level 1 N8N"
+      "createdAt": "2024-09-13T21:01:22.167Z",
+      "updatedAt": "2024-09-13T21:01:22.167Z",
+      "id": "9VKQau1XXIBiYDeL",
+      "name": "Level 2 N8N"
     }
   ],
-  "triggerCount": 1,
-  "updatedAt": "2024-09-13T23:56:27.000Z",
-  "versionId": "aeb227f1-a67d-4dcb-9192-efdc42390455"
+  "triggerCount": 0,
+  "updatedAt": "2024-09-16T20:47:20.000Z",
+  "versionId": "75846c03-269b-4725-959f-7d9b29274f06"
 }
